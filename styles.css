@@ -1,0 +1,815 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 5%;
+  height: 100%;
+  background-color: rgb(130, 130, 130);
+  overflow-x: hidden;
+}
+a,
+p {
+  font-family: sans-serif;
+}
+h1 {
+  font-family: serif;
+}
+:root {
+  --start-color: #0575e6;
+  --end-color: #021b79;
+  --p-color: #929da6;
+  --button-background: #0575e6;
+  --input-background: #e4eff8;
+  --radius-50: 50px;
+  --padding-15: 15px;
+  --margin-top: 100px;
+}
+.verticalLines {
+  width: 0.5px;
+  opacity: 10%;
+  height: 4985px;
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 0;
+}
+.verticalLines2 {
+  width: 0.5px;
+  opacity: 10%;
+  height: 4985px;
+  color: black;
+  position: absolute;
+  left: 25%;
+  top: 0;
+  z-index: 0;
+}
+.verticalLines3 {
+  width: 0.5px;
+  opacity: 10%;
+  height: 4985px;
+  color: rgba(213, 213, 213, 0.249);
+  position: absolute;
+  left: 75%;
+  top: 0;
+  z-index: 0;
+}
+.container {
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgb(211, 211, 211);
+  border-right: 1px solid rgb(216, 216, 216);
+}
+
+.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  color: #6d6d6d;
+}
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: rgb(77, 187, 255);
+  margin-left: 5rem;
+}
+.navbar-links ul {
+  margin-left: 10rem;
+  padding: 0;
+  display: flex;
+}
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  padding: 1rem;
+  display: block;
+  letter-spacing: 5px;
+  font-size: 10px;
+}
+.navbar-links li a:hover {
+  color: rgb(77, 187, 255);
+}
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(126, 126, 126);
+  border-radius: 10px;
+}
+.first {
+  height: 700px;
+  width: 100%;
+  background-color: rgb(242, 242, 242);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firstRight {
+  background-color: rgb(94, 193, 178);
+  width: 70%;
+  height: 70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: url("https://radseason.com/wp-content/uploads/2017/06/gabriel-medina.jpg")
+    no-repeat center / cover;
+  z-index: 1;
+}
+.firstLeft {
+  background-color: rgba(255, 255, 255, 0);
+  width: 35%;
+  height: 35%;
+  margin-right: -255px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 10px;
+}
+.blueItem {
+  color: #39a3ff;
+  font-weight: 300;
+  letter-spacing: 5px;
+  font-size: 10px;
+}
+.paragraph {
+  color: rgb(155, 155, 155);
+  line-height: 25px;
+}
+.firstHeading {
+  font-size: 40px;
+}
+.second {
+  width: 100%;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+.secondQuoteText {
+  width: 50%;
+  font-size: 30px;
+  background-color: rgba(157, 0, 0, 0);
+  color: #6d6d6d;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 40px;
+}
+.secondQuoteName {
+  letter-spacing: 7px;
+  font-weight: 300;
+}
+.secondItems {
+  display: flex;
+  width: 100%;
+  min-height: auto;
+  flex-direction: row;
+  margin-top: 100px;
+}
+.secondLeft {
+  background-color: rgb(0, 255, 255);
+  max-width: 50%;
+  max-height: 350px;
+  transform: translateX(-50%);
+}
+.secondLeftParagraph {
+  background-color: rgba(255, 255, 255, 0);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  color: rgb(155, 155, 155);
+  margin: 5% 0 0 20%;
+  line-height: 20px;
+}
+.secondLeftLink {
+  width: max-content;
+  text-decoration: rgb(97, 213, 255);
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: black;
+  text-decoration: none;
+}
+.secondLeftLink hr {
+  margin-top: 10px;
+  width: 90%;
+  color: rgb(109, 187, 255);
+  margin-right: 7.5px;
+}
+.secondRight {
+  width: 60%;
+  height: 500px;
+  z-index: 2;
+  margin-left: -130px;
+  margin-top: 50px;
+  transform: translateX(+50%);
+  background-color: rgb(144, 193, 205);
+}
+.secondImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.secondRight,
+.secondLeft {
+  transition: opacity 250ms ease-in, transform 700ms ease-in;
+  opacity: 0;
+}
+.secondRight.appear,
+.secondLeft.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+}
+.third {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 700px;
+  margin-top: 300px;
+}
+.thirdHeading {
+  min-height: 200px;
+  position: relative;
+}
+.thirdHeading p {
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  top: 20%;
+  letter-spacing: 7px;
+  color: #39a3ff;
+  font-size: x-small;
+  font-weight: 500;
+}
+.thirdHeading h1 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  margin-left: -130px;
+  letter-spacing: 5px;
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+.wrapper {
+  min-height: 500px;
+  background-color: rgb(255, 255, 255);
+  width: 115%;
+  margin-left: -112px;
+  padding-top: 100px;
+}
+.wrapper .carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+.carousel .card {
+  min-height: 400px;
+}
+.thirdAtag {
+  margin-top: 50px;
+}
+#c1 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Ozone/offroadbazar-ozone-torque-1100x1100h.jpg)
+    no-repeat center center/cover;
+}
+#c2 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Ozone/offroadbazar-ozone-code-v2-1100x1100.jpg)
+    no-repeat center center/cover;
+}
+#c3 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Ozone/offroadbazar-ozone-code-v2-blue-1100x1100h.jpg)
+    no-repeat center center/cover;
+}
+#c4 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Ozone/offroadbazar-ozone-base-v1-red-2-1100x1100h.jpg)
+    no-repeat center center/cover;
+}
+#c5 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Ozone/offroadbazar-ozone-base-v1-7-1100x1100h.jpg)
+    no-repeat center center/cover;
+}
+#c6 {
+  background: url(https://offroadbazar.com/image/cache/catalog/Lieuwe/offroadbazar-lieuwe-awesome-1100x1100h.jpg)
+    no-repeat center center/cover;
+}
+
+.slider_desc {
+  display: block;
+  position: absolute;
+
+  left: 230px;
+  top: 100px;
+}
+.slider_desc h1 {
+  font-weight: 300;
+  color: black;
+}
+.slider_desc p:nth-child(1) {
+  color: #929da6;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+.slider_desc p {
+  color: rgb(237, 123, 123);
+  font-size: 20px;
+}
+.slider_desc a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 8px;
+  font-weight: 500;
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.owl-prev {
+  left: -100px;
+}
+.owl-next {
+  right: -120px;
+}
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 20px;
+  color: black;
+  transition: all 0.2s;
+}
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+  color: rgb(121, 203, 255);
+}
+.thirdAtag {
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  width: max-content;
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: black;
+  text-decoration: none;
+}
+.thirdAtag hr {
+  margin-top: 10px;
+  width: 90%;
+  color: rgb(109, 187, 255);
+  margin-right: 5px;
+}
+.fourth {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+  width: 100%;
+  margin-top: 200px;
+}
+.fourthPartOneText hr:nth-child(2) {
+  max-width: 25px;
+  margin-left: 0;
+  height: 2px;
+  background-color: rgb(59, 160, 248);
+}
+.fourthPartOne {
+  width: 100%;
+  max-height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.fourthPartOneText {
+  width: 35%;
+  margin: auto;
+
+  padding: 0 0 20px 70px;
+}
+.fourthPartOneText h1 {
+  font-size: 4em;
+  font-weight: 500;
+  display: inline-block;
+}
+.fourthPartOneText p {
+  padding: 10px 30px 20px 0;
+  line-height: 1.5rem;
+  color: rgb(155, 155, 155);
+}
+.fourthPartOneText a {
+  font-weight: 600;
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: rgb(84, 84, 84);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fourthPartOneText a hr {
+  margin-top: 10px;
+  width: 90%;
+  color: rgb(109, 187, 255);
+  margin-right: 7px;
+}
+.fourthPartOneImage {
+  width: 65%;
+  z-index: 1;
+}
+.fourthPartOneImage img {
+  width: 100%;
+  height: 400px;
+
+  object-fit: cover;
+}
+.fourthPartTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 50%;
+  margin-top: 150px;
+}
+.fourthPartTwoText {
+  max-height: 75%;
+  width: 35%;
+  padding: 70px 20px 0 50px;
+}
+.fourthPartTwoImage img {
+  height: 400px;
+  width: 500px;
+  background-color: rgb(4, 4, 4);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  float: right;
+  object-fit: cover;
+}
+.fourthPartTwoImage {
+  width: 65%;
+}
+
+.fourthPartTwoText h1 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+.fourthPartTwoText p {
+  padding: 10px 30px 20px 0;
+  line-height: 1.5rem;
+  color: rgb(155, 155, 155);
+}
+.fourthPartTwoText a {
+  font-weight: 600;
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: rgb(84, 84, 84);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fourthPartTwoText a hr {
+  margin-top: 10px;
+  width: 90%;
+  margin-right: 7px;
+  color: rgb(109, 187, 255);
+}
+.fifth {
+  width: 100%;
+  min-height: 200px;
+  align-items: center;
+}
+
+.fifthwrapper {
+  height: 100%;
+  margin: var(--margin-top);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fifthwrapper .content {
+  background-color: rgb(240, 240, 240);
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+  text-align: center;
+  z-index: 1;
+}
+
+.fifthwrapper .content header h1 {
+  font-size: 2.4vw;
+  font-weight: 500;
+  margin-top: 0;
+}
+.fifthwrapper .content section {
+  color: var(--p-color);
+  font-size: 15px;
+}
+.fifthwrapper .content footer {
+  padding: var(--padding-15);
+}
+
+.fifthwrapper .content footer input::placeholder {
+  color: black;
+  letter-spacing: 5px;
+  font-size: xx-small;
+}
+.fifthwrapper .content footer input {
+  border: unset;
+  background-color: var(--input-background);
+  padding: var(--padding-15);
+  font-size: 13px;
+  border-radius: var(--radius-50);
+  width: 250px;
+}
+.fifthwrapper .content footer button {
+  background-color: var(--button-background);
+  color: #fff;
+  border: unset;
+  width: 120px;
+  border-radius: var(--radius-50);
+  padding: var(--padding-15);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.fifthwrapper .content footer input:focus,
+.wrapper .content footer button:focus {
+  outline: none;
+}
+.exclusive_section {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+.sixth {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+.sixthText {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  padding-top: 90px;
+}
+.sixthText p {
+  font-weight: 500;
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: rgb(143, 143, 143);
+}
+.sixthText h1 {
+  font-weight: 400;
+  width: 50%;
+  margin-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.sixthText a {
+  font-weight: 600;
+  font-size: x-small;
+  letter-spacing: 5px;
+  color: rgb(109, 187, 255);
+  text-decoration: none;
+  display: inline-block;
+  /* border-bottom: 1px solid blue; */
+}
+.sixthText a hr {
+  margin-top: 10px;
+  width: 95%;
+  color: rgb(109, 187, 255);
+  margin-right: 5px;
+}
+.sixthImage {
+  width: 50%;
+  height: 400px;
+  background-color: chocolate;
+  z-index: 1;
+}
+.sixthImage img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.sixthText {
+  width: 45%;
+  height: 400px;
+}
+.footerBox {
+  background-color: rgb(238, 238, 238);
+  padding-top: 30px;
+  width: 100%;
+  height: 200px;
+}
+.footerBox ul {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 194, 194);
+  padding-right: 40px;
+}
+.footerBox li {
+  margin: 0 20px;
+}
+.footerBox li a {
+  text-decoration: none;
+  font-size: 0.2rem;
+  letter-spacing: 5px;
+  color: #6d6d6d;
+}
+.footerBox li a:hover {
+  color: rgb(77, 187, 255);
+}
+.footerBox i {
+  display: block;
+  margin: auto;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(117, 186, 255) !important;
+}
+
+@media screen and (max-width: 720px) {
+  .fifthwrapper .content {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+    padding: var(--padding-15);
+  }
+  .fifthwrapper .content footer input {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  .brand-title {
+    margin: 1rem 1rem 0 2rem;
+  }
+  .first {
+    flex-direction: column;
+    text-align: center;
+  }
+  .first .firstLeft {
+    width: 70%;
+    margin: 0;
+  }
+  .first .firstLeft h1 {
+    font-size: 30px;
+  }
+  .second {
+    margin-top: 100px;
+    max-height: 2000px;
+  }
+  .secondItems {
+    flex-direction: column;
+  }
+  .secondItems .secondLeft {
+    max-width: 100%;
+  }
+  .secondItems .secondRight {
+    width: 100%;
+    margin: 250px 0 0 0;
+  }
+  .secondLeftParagraph {
+    width: 100%;
+    align-items: center;
+    margin: 50px 0 0 0;
+    text-align: center;
+  }
+  .secondQuoteName {
+    font-size: 10px;
+  }
+  .third {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .slider_desc {
+    top: 100px;
+    left: 350px;
+    z-index: 3;
+  }
+  .thirdAtag {
+    margin-top: -50px;
+  }
+  .owl-prev {
+    left: 10px;
+  }
+  .owl-next {
+    right: 0;
+  }
+  .fourthPartOneImage img {
+    height: 100%;
+  }
+  .fourthPartOneText {
+    margin-bottom: 50px;
+  }
+  .fourthPartOneText h1 {
+    font-size: 50px;
+  }
+  .fourthPartTwoText h1 {
+    margin-top: 30px;
+  }
+  .fourthPartOneText a {
+    float: right;
+    margin: 10px -90px 0 0;
+  }
+  .fourthPartTwo {
+    flex-direction: column;
+  }
+  .fourthPartTwoText {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  .fourthPartTwoImage {
+    width: 100%;
+  }
+  .fourthPartTwoImage img {
+    width: 100%;
+  }
+  .fifth {
+    margin-top: 300px;
+  }
+  .sixth {
+    flex-direction: column;
+    margin: 30px 0 100px 0;
+  }
+
+  .sixthText {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .sixthText h1 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+  }
+  .sixthImage {
+    width: 100%;
+  }
+  .verticalLines,
+  .verticalLines2,
+  .verticalLines3 {
+    height: 5975px;
+    opacity: 5%;
+  }
+}
